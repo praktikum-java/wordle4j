@@ -13,4 +13,11 @@ package ru.yandex.practicum;
 не забудьте про специальные типы исключений для игровых и неигровых ошибок
  */
 public class WordleGame {
+
+    private String answer;
+
+    private int steps;
+
+    private WordleDictionary dictionary;
+
 }
