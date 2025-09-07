@@ -66,16 +66,8 @@ public class WordleDictionary {
         this.words.addAll(words);
     }
 
-    public String get(int index) {
-        return words.get(index);
-    }
-
     public int size() {
         return words.size();
-    }
-
-    public String remove(int index) {
-        return words.remove(index);
     }
 
     public void clear() {

@@ -2,7 +2,6 @@ package ru.yandex.practicum;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.time.Instant;
 import java.util.Scanner;
 
 public class Wordle {
@@ -16,7 +15,7 @@ public class Wordle {
     }
 
     public static void main(String[] args) {
-        try (FileOutputStream fos = new FileOutputStream("log." + Instant.now().getEpochSecond() + ".txt"); Writer writer = new OutputStreamWriter(fos, StandardCharsets.UTF_8)) {
+        try (FileOutputStream fos = new FileOutputStream("log.txt"); Writer writer = new OutputStreamWriter(fos, StandardCharsets.UTF_8)) {
             PrintWriter log = new PrintWriter(writer, true);
             try {
                 WordleDictionary wordleDictionary = new WordleDictionaryLoader(log).loadDictionaryFromFile(WORDS_FILE);

@@ -21,6 +21,8 @@ public class WordleGame {
     public WordleGame(PrintWriter log, WordleDictionary someDictionary) throws WordleGameWrongWordException {
         this.log = log;
         initDictionaryFrom(someDictionary);
+        wholeDictionary.addAll(gameDictionary.getAll());
+        log.println(String.format("В словарь игры загружено %d слов", wholeDictionary.size()));
     }
 
     public String getAnswer() {
@@ -45,7 +47,6 @@ public class WordleGame {
         if (!word.isBlank() && word.length() == WORD_LENGTH) {
             gameDictionary.add(word);
         }
-        wholeDictionary.addAll(gameDictionary.getAll());
     }
 
     public boolean isEnd() {
